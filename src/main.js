@@ -1,15 +1,12 @@
 import toggleTheme from '/src/toggle-theme.js';
 
-const button = document.getElementById('theme-toggle');
+// Theme toggle
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
-const updateButtonText = () => {
-	const isDark = document.documentElement.classList.contains('dark');
-	button.textContent = isDark ? '☀️ Light' : '🌙 Dark';
-};
+// Mobile menu toggle
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-updateButtonText();
-
-button.addEventListener('click', () => {
-	toggleTheme();
-	updateButtonText();
+mobileMenuToggle.addEventListener('click', () => {
+	mobileMenu.classList.toggle('hidden');
 });

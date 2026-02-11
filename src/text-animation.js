@@ -24,6 +24,29 @@ function animateCountUp(target, duration) {
 	}, 10);
 }
 
-targets.forEach((target) => {
-	animateCountUp(target, 1000);
-});
+// targets.forEach((target) => {
+// 	animateCountUp(target, 1000);
+// });
+
+// Intersection Observer - runs animation when section is visible
+const statsSection = document.getElementById('stats');
+let hasAnimated = false;
+
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting && !hasAnimated) {
+				hasAnimated = true;
+				// Start animations when section comes into view
+				targets.forEach((target) => {
+					animateCountUp(target, 1000);
+				});
+			}
+		});
+	},
+	{
+		threshold: 0.3, // Trigger when 30% of the section is visible
+	},
+);
+
+observer.observe(statsSection);

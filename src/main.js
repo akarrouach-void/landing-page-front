@@ -1,6 +1,7 @@
-import toggleTheme from '/src/toggle-theme.js';
-import '/src/form-handler.js';
-import '/src/faq-handler.js';
+import toggleTheme from './toggle-theme.js';
+import './form-handler.js';
+import './faq-handler.js';
+import './text-animation.js';
 
 // Theme toggle
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);

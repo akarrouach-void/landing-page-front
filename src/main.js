@@ -1,4 +1,5 @@
 import toggleTheme from '/src/toggle-theme.js';
+import '/src/form-handler.js';
 
 // Theme toggle
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);

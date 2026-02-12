@@ -1,7 +1,6 @@
 const cards = [
 	{
-		image:
-			'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800&auto=format&fit=crop',
+		image: '/images/k4aijemqk7mhqmen6gfr.avif',
 		alt: 'Fashion boutique clothing rack',
 		title: 'Lorem Ipsum Is Simply Do Text Of That',
 		subtitle: 'Lorem Ipsum is simply dummy text of the printing.',
@@ -9,8 +8,7 @@ const cards = [
 		link: 'Lorem Ips',
 	},
 	{
-		image:
-			'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=800&auto=format&fit=crop',
+		image: '/images/kgyub9c96tjjtw6spv41.avif',
 		alt: 'Women fashion accessories display',
 		title: 'Lorem Ipsum Is Simply Do Text Of That',
 		subtitle: 'Lorem Ipsum is simply dummy text of the printing.',
@@ -18,8 +16,7 @@ const cards = [
 		link: 'Lorem Ips',
 	},
 	{
-		image:
-			'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop',
+		image: '/images/lpdxkgofmjs45ypda9ev.avif',
 		alt: 'Shopping bags fashion boutique',
 		title: 'Lorem Ipsum Is Simply Do Text Of That',
 		subtitle: 'Lorem Ipsum is simply dummy text of the printing.',
@@ -27,8 +24,7 @@ const cards = [
 		link: 'Lorem Ips',
 	},
 	{
-		image:
-			'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop',
+		image: '/images/qcamjyxmfc7dc84kamp3.avif',
 		alt: 'Elegant fashion clothing',
 		title: 'Lorem Ipsum Is Simply Do Text Of That',
 		subtitle: 'Lorem Ipsum is simply dummy text of the printing.',
@@ -36,8 +32,7 @@ const cards = [
 		link: 'Lorem Ips',
 	},
 	{
-		image:
-			'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop',
+		image: '/images/zgxwvhhbqv508wleamjn.avif',
 		alt: 'Fashion store interior',
 		title: 'Lorem Ipsum Is Simply Do Text Of That',
 		subtitle: 'Lorem Ipsum is simply dummy text of the printing.',
@@ -45,8 +40,7 @@ const cards = [
 		link: 'Lorem Ips',
 	},
 	{
-		image:
-			'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop',
+		image: '/images/k4aijemqk7mhqmen6gfr.avif',
 		alt: 'Fashion model boutique style',
 		title: 'Lorem Ipsum Is Simply Do Text Of That',
 		subtitle: 'Lorem Ipsum is simply dummy text of the printing.',
@@ -65,7 +59,10 @@ function createCard(card) {
 					src="${card.image}"
 					alt="${card.alt}"
 					class="w-full h-full object-cover hover:scale-105 transition duration-500"
+					width="800"
+					height="600"
 					loading="lazy"
+					decoding="async"
 				/>
 			</div>
 			<div class="p-6 space-y-3">

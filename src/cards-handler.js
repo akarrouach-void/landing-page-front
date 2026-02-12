@@ -82,20 +82,20 @@ function initCards() {
 	if (!grid || !loadMoreBtn) return;
 
 	// Render initial cards
-	grid.textContent = cards.slice(0, INITIAL_COUNT).map(createCard).join('');
+	grid.innerHTML = cards.slice(0, INITIAL_COUNT).map(createCard).join('');
 
 	let expanded = false;
 
 	loadMoreBtn.addEventListener('click', () => {
 		if (!expanded) {
 			// Load more: render all cards
-			grid.textContent = cards.map(createCard).join('');
-			loadMoreBtn.textContent = 'LOAD LESS';
+			grid.innerHTML = cards.map(createCard).join('');
+			loadMoreBtn.innerHTML = 'LOAD LESS';
 			expanded = true;
 		} else {
 			// Load less: back to initial
-			grid.textContent = cards.slice(0, INITIAL_COUNT).map(createCard).join('');
-			loadMoreBtn.textContent = 'LOAD MORE';
+			grid.innerHTML = cards.slice(0, INITIAL_COUNT).map(createCard).join('');
+			loadMoreBtn.innerHTML = 'LOAD MORE';
 			expanded = false;
 
 			// Scroll back up to cards section smoothly

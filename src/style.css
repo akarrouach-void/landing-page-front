@@ -29,6 +29,6 @@ button {
 
 /* Ensure minimum touch target size when very small elements are used */
 .min-touch {
-	min-width: 44px;
-	min-height: 44px;
+	min-width: 36px;
+	min-height: 36px;
 }

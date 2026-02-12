@@ -43,7 +43,8 @@
 					<div class="flex items-center space-x-4">
 						<a
 							href="#"
-							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+							aria-label="Facebook"
 						>
 							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 								<path
@@ -53,7 +54,8 @@
 						</a>
 						<a
 							href="#"
-							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+							aria-label="Twitter"
 						>
 							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 								<path
@@ -63,7 +65,8 @@
 						</a>
 						<a
 							href="#"
-							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+							aria-label="Instagram"
 						>
 							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 								<path
@@ -73,7 +76,8 @@
 						</a>
 						<a
 							href="#"
-							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+							aria-label="YouTube"
 						>
 							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 								<path
@@ -83,7 +87,8 @@
 						</a>
 						<a
 							href="#"
-							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+							class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+							aria-label="LinkedIn"
 						>
 							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 								<path
@@ -167,6 +172,8 @@
 						<button
 							class="text-gray-700 dark:text-gray-300 hover:text-blue-900 dark:hover:text-blue-400 transition"
 						>
+							<span class="sr-only">Open menu</span>
+
 							<svg
 								class="w-5 h-5"
 								fill="none"
@@ -236,6 +243,8 @@
 						<button
 							class="hidden md:block px-8 py-3 bg-blue-900 dark:bg-blue-700 text-white font-semibold hover:bg-blue-800 dark:hover:bg-blue-600 transition"
 						>
+							<span class="sr-only">Majority Have</span>
+
 							MAJORITY HAVE
 						</button>
 
@@ -287,7 +296,9 @@
 						<!-- Mobile menu button -->
 						<button
 							id="mobile-menu-toggle"
-							class="md:hidden p-2 text-gray-700 dark:text-gray-300"
+							class="md:hidden p-2 text-gray-700 dark:text-gray-300 touch-target"
+							type="button"
+							aria-label="Toggle mobile menu"
 						>
 							<svg
 								class="w-6 h-6"
@@ -387,20 +398,65 @@
 
 				<div class="flex justify-center space-x-2 mt-12">
 					<button
-						class="w-3 h-3 rounded-full bg-blue-900 dark:bg-blue-600"
-					></button>
+						type="button"
+						class="touch-target min-touch"
+						aria-label="Go to slide 1"
+						aria-pressed="true"
+					>
+						<span class="sr-only">Slide 1</span>
+						<span
+							class="w-3 h-3 rounded-full bg-blue-900 dark:bg-blue-600"
+							aria-hidden="true"
+						></span>
+					</button>
 					<button
-						class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
-					></button>
+						type="button"
+						class="touch-target min-touch"
+						aria-label="Go to slide 2"
+						aria-pressed="false"
+					>
+						<span class="sr-only">Slide 2</span>
+						<span
+							class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
+							aria-hidden="true"
+						></span>
+					</button>
 					<button
-						class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
-					></button>
+						type="button"
+						class="touch-target min-touch"
+						aria-label="Go to slide 3"
+						aria-pressed="false"
+					>
+						<span class="sr-only">Slide 3</span>
+						<span
+							class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
+							aria-hidden="true"
+						></span>
+					</button>
 					<button
-						class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
-					></button>
+						type="button"
+						class="touch-target min-touch"
+						aria-label="Go to slide 4"
+						aria-pressed="false"
+					>
+						<span class="sr-only">Slide 4</span>
+						<span
+							class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
+							aria-hidden="true"
+						></span>
+					</button>
 					<button
-						class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
-					></button>
+						type="button"
+						class="touch-target min-touch"
+						aria-label="Go to slide 5"
+						aria-pressed="false"
+					>
+						<span class="sr-only">Slide 5</span>
+						<span
+							class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500"
+							aria-hidden="true"
+						></span>
+					</button>
 				</div>
 			</div>
 		</main>
@@ -411,11 +467,11 @@
 				<div class="grid md:grid-cols-2 gap-8 items-center">
 					<!-- Left Content -->
 					<div class="space-y-6">
-						<h1
+						<h2
 							class="text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white font-semibold"
 						>
 							Lorem As
-						</h1>
+						</h2>
 
 						<p
 							class="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed italic font-semibold"
@@ -532,7 +588,11 @@
 				<!-- FAQ Item 1 — open by default -->
 				<div class="faq-item mb-4">
 					<button
+						id="faq-toggle-1"
+						type="button"
 						class="faq-toggle w-full flex items-center justify-between px-6 py-5 bg-white dark:bg-gray-800 text-left transition border-transparent gap-2"
+						aria-expanded="true"
+						aria-controls="faq-content-1"
 					>
 						<span class="font-bold text-gray-900 dark:text-white md:text-xl"
 							>Lorem Ipsum Is Simply Dummy</span
@@ -546,6 +606,9 @@
 						</div>
 					</button>
 					<div
+						id="faq-content-1"
+						role="region"
+						aria-labelledby="faq-toggle-1"
 						class="faq-content bg-white dark:bg-gray-800 px-6 py-5 text-sm md:text-base text-gray-600 dark:text-gray-400 space-y-4"
 					>
 						<div>
@@ -604,7 +667,11 @@
 				<!-- FAQ Item 2 -->
 				<div class="faq-item mb-3">
 					<button
+						id="faq-toggle-2"
+						type="button"
 						class="faq-toggle gap-2 w-full flex items-center justify-between px-6 py-5 bg-white dark:bg-gray-800 text-left transition border-transparent"
+						aria-expanded="false"
+						aria-controls="faq-content-2"
 					>
 						<span class="font-bold text-gray-900 dark:text-white md:text-xl"
 							>Lorem Ipsum</span
@@ -618,6 +685,9 @@
 						</div>
 					</button>
 					<div
+						id="faq-content-2"
+						role="region"
+						aria-labelledby="faq-toggle-2"
 						class="faq-content hidden bg-white dark:bg-gray-800 px-6 py-5 text-sm md:text-base text-gray-600 dark:text-gray-400"
 					>
 						<p>
@@ -630,7 +700,11 @@
 				<!-- FAQ Item 3 -->
 				<div class="faq-item mb-3">
 					<button
+						id="faq-toggle-3"
+						type="button"
 						class="faq-toggle gap-2 w-full flex items-center justify-between px-6 py-5 bg-white dark:bg-gray-800 text-left transition border-transparent"
+						aria-expanded="false"
+						aria-controls="faq-content-3"
 					>
 						<span class="font-bold text-gray-900 dark:text-white md:text-xl"
 							>Lorem Ipsum Is Simply</span
@@ -644,6 +718,9 @@
 						</div>
 					</button>
 					<div
+						id="faq-content-3"
+						role="region"
+						aria-labelledby="faq-toggle-3"
 						class="faq-content hidden bg-white dark:bg-gray-800 px-6 py-5 text-sm md:text-base text-gray-600 dark:text-gray-400"
 					>
 						<p>
@@ -656,7 +733,11 @@
 				<!-- FAQ Item 4 -->
 				<div class="faq-item mb-3">
 					<button
+						id="faq-toggle-4"
+						type="button"
 						class="faq-toggle gap-2 w-full flex items-center justify-between px-6 py-5 bg-white dark:bg-gray-800 text-left transition border-transparent"
+						aria-expanded="false"
+						aria-controls="faq-content-4"
 					>
 						<span class="font-bold text-gray-900 dark:text-white md:text-xl"
 							>Lorem Ipsum Is Simply Dummy</span
@@ -670,6 +751,9 @@
 						</div>
 					</button>
 					<div
+						id="faq-content-4"
+						role="region"
+						aria-labelledby="faq-toggle-4"
 						class="faq-content hidden bg-white dark:bg-gray-800 px-6 py-5 text-sm md:text-base text-gray-600 dark:text-gray-400"
 					>
 						<p>
@@ -682,7 +766,11 @@
 				<!-- FAQ Item 5 -->
 				<div class="faq-item mb-3">
 					<button
+						id="faq-toggle-5"
+						type="button"
 						class="faq-toggle gap-2 w-full flex items-center justify-between px-6 py-5 bg-white dark:bg-gray-800 text-left transition border-transparent"
+						aria-expanded="false"
+						aria-controls="faq-content-5"
 					>
 						<span class="font-bold text-gray-900 dark:text-white md:text-xl"
 							>Lorem Ipsum</span
@@ -696,6 +784,9 @@
 						</div>
 					</button>
 					<div
+						id="faq-content-5"
+						role="region"
+						aria-labelledby="faq-toggle-5"
 						class="faq-content hidden bg-white dark:bg-gray-800 px-6 py-5 text-sm md:text-base text-gray-600 dark:text-gray-400"
 					>
 						<p>
@@ -708,7 +799,11 @@
 				<!-- FAQ Item 6 -->
 				<div class="faq-item mb-3">
 					<button
+						id="faq-toggle-6"
+						type="button"
 						class="faq-toggle gap-2 w-full flex items-center justify-between px-6 py-5 bg-white dark:bg-gray-800 text-left transition border-transparent"
+						aria-expanded="false"
+						aria-controls="faq-content-6"
 					>
 						<span class="font-bold text-gray-900 dark:text-white md:text-xl"
 							>Lorem Ipsum Is Simply</span
@@ -722,6 +817,9 @@
 						</div>
 					</button>
 					<div
+						id="faq-content-6"
+						role="region"
+						aria-labelledby="faq-toggle-6"
 						class="faq-content hidden bg-white dark:bg-gray-800 px-6 py-5 text-sm md:text-base text-gray-600 dark:text-gray-400"
 					>
 						<p>
@@ -928,7 +1026,8 @@
 						<div class="flex items-center space-x-4">
 							<a
 								href="#"
-								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+								aria-label="Facebook"
 							>
 								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 									<path
@@ -938,7 +1037,8 @@
 							</a>
 							<a
 								href="#"
-								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+								aria-label="Twitter"
 							>
 								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 									<path
@@ -948,7 +1048,8 @@
 							</a>
 							<a
 								href="#"
-								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+								aria-label="Instagram"
 							>
 								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 									<path
@@ -958,7 +1059,8 @@
 							</a>
 							<a
 								href="#"
-								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+								aria-label="YouTube"
 							>
 								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 									<path
@@ -968,7 +1070,8 @@
 							</a>
 							<a
 								href="#"
-								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+								class="text-blue-900 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition touch-target"
+								aria-label="LinkedIn"
 							>
 								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 									<path
@@ -981,9 +1084,9 @@
 
 					<!-- Col 2: Printings A -->
 					<div class="space-y-5">
-						<h4 class="text-lg font-bold text-gray-900 dark:text-white">
+						<h3 class="text-lg font-bold text-gray-900 dark:text-white">
 							Printings A
-						</h4>
+						</h3>
 						<ul class="space-y-3">
 							<li>
 								<a
@@ -1025,9 +1128,9 @@
 
 					<!-- Col 3: Majority -->
 					<div class="space-y-5">
-						<h4 class="text-lg font-bold text-gray-900 dark:text-white">
+						<h3 class="text-lg font-bold text-gray-900 dark:text-white">
 							Majority
-						</h4>
+						</h3>
 						<ul class="space-y-3">
 							<li>
 								<a
@@ -1055,9 +1158,9 @@
 
 					<!-- Col 4: Generator (Contact) -->
 					<div class="space-y-5">
-						<h4 class="text-lg font-bold text-gray-900 dark:text-white">
+						<h3 class="text-lg font-bold text-gray-900 dark:text-white">
 							Generator
-						</h4>
+						</h3>
 						<ul class="space-y-4">
 							<!-- Phone -->
 							<li class="flex items-start space-x-3">

@@ -7,19 +7,36 @@ faqItems.forEach(function (item) {
 	const content = item.querySelector('.faq-content');
 	const icon = item.querySelector('.faq-icon');
 
-	button.addEventListener('click', function () {
-		const isOpen = !content.classList.contains('hidden');
+	// Initialize ARIA states based on content visibility
+	if (content.classList.contains('hidden')) {
+		button.setAttribute('aria-expanded', 'false');
+		content.setAttribute('aria-hidden', 'true');
+	} else {
+		button.setAttribute('aria-expanded', 'true');
+		content.setAttribute('aria-hidden', 'false');
+	}
 
-		// Close all items first
+	button.addEventListener('click', function () {
+		const isOpen = content.classList.contains('hidden') === false;
+
+		// Close all items first and update ARIA
 		faqItems.forEach(function (el) {
-			el.querySelector('.faq-content').classList.add('hidden');
-			el.querySelector('.faq-icon').textContent = '+';
+			const elButton = el.querySelector('.faq-toggle');
+			const elContent = el.querySelector('.faq-content');
+			const elIcon = el.querySelector('.faq-icon');
+
+			elContent.classList.add('hidden');
+			elIcon.textContent = '+';
+			elButton.setAttribute('aria-expanded', 'false');
+			elContent.setAttribute('aria-hidden', 'true');
 		});
 
 		// If it was closed, open it
 		if (!isOpen) {
 			content.classList.remove('hidden');
 			icon.textContent = '-';
+			button.setAttribute('aria-expanded', 'true');
+			content.setAttribute('aria-hidden', 'false');
 		}
 	});
 });

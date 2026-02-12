@@ -20,7 +20,7 @@ button {
 
 /* Make icon-only controls easier to hit on touch devices without changing icon size */
 .touch-target {
-	display: inline-flex;
+	display: inherit;
 	align-items: center;
 	justify-content: center;
 	padding: 8px;

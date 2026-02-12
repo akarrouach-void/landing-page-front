@@ -3,6 +3,7 @@ import './form-handler.js';
 import './faq-handler.js';
 import './text-animation.js';
 import './cards-handler.js';
+import './hero-slider.js';
 
 // Theme toggle
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);

@@ -969,6 +969,8 @@
 								type="text"
 								placeholder="Name"
 								id="form-name"
+					data-error-required="Name is required."
+								name="name"
 								required
 								class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition rounded-xs"
 							/>
@@ -984,6 +986,7 @@
 								placeholder="Email"
 								id="form-email"
 								data-validate="email"
+								name="email"
 								required
 								class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition rounded-xs"
 							/>
@@ -997,8 +1000,8 @@
 							<input
 								type="tel"
 								id="form-phone"
+								name="phone"
 								placeholder="Phone Number"
-								pattern="^(?:(?:(?:\+|00)212[\s]?(?:[\s]?\(0\)[\s]?)?)|0){1}(?:5[\s.-]?[2-3]|6[\s.-]?[13-9]){1}[0-9]{1}(?:[\s.-]?\d{2}){3}$"
 								data-error-message="Please enter a valid Moroccan phone number"
 								required
 								class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition rounded-xs"
@@ -1017,6 +1020,7 @@
 							placeholder="Your message..."
 							id="form-message"
 							rows="8"
+							name="message"
 							data-min-length="10"
 							required
 							class="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition resize-none"

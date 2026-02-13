@@ -38,12 +38,9 @@ function showError(fieldId, message) {
 	input.setAttribute('aria-invalid', 'true');
 }
 
-function clearErrors() {
-	document.querySelectorAll('.error-message').forEach((el) => el.remove());
-
-	FIELD_RULES.forEach(({ id }) => {
-		const input = document.getElementById(id);
-		if (!input) return;
+function clearErrors(form) {
+	form.querySelectorAll('.error-message').forEach((el) => el.remove());
+	form.querySelectorAll('input, textarea, select').forEach((input) => {
 		input.classList.remove('!border-red-500');
 		input.removeAttribute('aria-invalid');
 	});
@@ -67,7 +64,7 @@ function validateField({
 		showError(id, requiredMsg);
 		return false;
 	}
-	if (pattern && !pattern.test(value)) {
+	if (pattern && value !== '' && !pattern.test(value)) {
 		showError(id, patternMsg);
 		return false;
 	}
@@ -85,9 +82,9 @@ export function initFormHandler() {
 
 	form.addEventListener('submit', function (e) {
 		e.preventDefault();
-		clearErrors();
+		clearErrors(form);
 
-		const isValid = FIELD_RULES.map(validateField).every(Boolean);
+		const isValid = FIELD_RULES.every(validateField);
 		if (!isValid) return;
 
 		const values = Object.fromEntries(

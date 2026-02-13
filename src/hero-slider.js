@@ -37,25 +37,27 @@ const slides = [
 ];
 
 let currentSlide = 0;
+let interval;
 
 function updateSlide(index) {
 	const slide = slides[index];
 
 	// Update image
-	const heroImage = document.querySelector('#hero img');
+	const heroImage = document.querySelector('#hero #hero-image');
+
 	if (heroImage) {
 		heroImage.src = slide.image;
 		heroImage.alt = slide.alt;
 	}
 
 	// Update title
-	const heroTitle = document.querySelector('#hero h1');
+	const heroTitle = document.querySelector('#hero #hero-title');
 	if (heroTitle) {
 		heroTitle.textContent = slide.title;
 	}
 
 	// Update description
-	const heroDescription = document.querySelector('#hero p');
+	const heroDescription = document.querySelector('#hero #hero-description');
 	if (heroDescription) {
 		heroDescription.textContent = slide.description;
 	}
@@ -81,20 +83,21 @@ function updateSlide(index) {
 	currentSlide = index;
 }
 
-function initHeroSlider() {
+export function initHeroSlider() {
 	const dots = document.querySelectorAll('#hero .hero-dot');
+
+	if (!dots.length) return;
 
 	dots.forEach((dot, index) => {
 		dot.addEventListener('click', () => {
+			clearInterval(interval);
 			updateSlide(index);
 		});
 	});
 
-	// Auto-advance slider every 3 seconds
-	setInterval(() => {
+	// Auto-advance slider every 5 seconds
+	interval = setInterval(() => {
 		const nextSlide = (currentSlide + 1) % slides.length;
 		updateSlide(nextSlide);
 	}, 5000);
 }
-
-initHeroSlider();

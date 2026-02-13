@@ -75,7 +75,7 @@ function createCard(card) {
 	`;
 }
 
-function initCards() {
+export function initCardsHandler() {
 	const grid = document.getElementById('cards-grid');
 	const loadMoreBtn = document.getElementById('load-more-btn');
 
@@ -105,5 +105,3 @@ function initCards() {
 		}
 	});
 }
-
-initCards();

@@ -17,10 +17,9 @@ function animateCountUp(target, duration) {
 		if (currentCount >= target.count) {
 			clearInterval(interval);
 			currentCount = target.count;
-			target.element.textContent = currentCount + (target.suffix || '');
-		} else {
-			target.element.textContent = currentCount + (target.suffix || '');
 		}
+
+		target.element.textContent = currentCount + (target.suffix || '');
 	}, 10);
 }
 
@@ -28,25 +27,31 @@ function animateCountUp(target, duration) {
 // 	animateCountUp(target, 1000);
 // });
 
-// Intersection Observer - runs animation when section is visible
-const statsSection = document.getElementById('stats');
-let hasAnimated = false;
+export function initTextAnimation() {
+	// Intersection Observer - runs animation when section is visible
+	const statsSection = document.getElementById('stats');
+	if (!statsSection) return;
 
-const observer = new IntersectionObserver(
-	(entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting && !hasAnimated) {
-				hasAnimated = true;
-				// Start animations when section comes into view
-				targets.forEach((target) => {
-					animateCountUp(target, 1000);
-				});
-			}
-		});
-	},
-	{
-		threshold: 0.3, // Trigger when 30% of the section is visible
-	},
-);
+	let hasAnimated = false;
 
-observer.observe(statsSection);
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !hasAnimated) {
+					hasAnimated = true;
+					// Start animations when section comes into view
+					targets.forEach((target) => {
+						if (target.element) {
+							animateCountUp(target, 1000);
+						}
+					});
+				}
+			});
+		},
+		{
+			threshold: 0.3, // Trigger when 30% of the section is visible
+		},
+	);
+
+	observer.observe(statsSection);
+}
